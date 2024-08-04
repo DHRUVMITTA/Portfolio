@@ -7,7 +7,7 @@ html, body {
     /* overflow: hidden; */
     scroll-behavior: smooth;
     background-color: rgb(5, 9, 19);
- 
+
     color:white;
     /* box-sizing: border-box; */
 }
@@ -34,8 +34,9 @@ html, body {
     justify-content: space-between;
     border-bottom: 2px solid rgba(209, 203, 203, 0.199);
     padding: 0  2vw;
+    /* position imp for z index for working*/
     position:fixed;
-    z-index: 4;
+    z-index: 999;
 
 }
 #cursor {
@@ -55,7 +56,7 @@ html, body {
     border-radius: 50%;
     position: fixed;
     filter: blur(80px);
-    z-index: 9;
+    z-index: 11;
     transition: all linear 0.4s;
     pointer-events: none;
   }
@@ -183,7 +184,7 @@ margin-top: 40px;
     /* min-height: 100vh; */
  
     width: 100%;
-    z-index: 10;
+    z-index: 4;
     position: relative; /* Ensure relative positioning */
 }
 
@@ -194,7 +195,8 @@ margin-top: 40px;
     position: absolute; /* Change to absolute positioning */
     bottom: 0; /* Position at the bottom */
     width: 100%; /* Full width */
-    z-index: 10;
+    z-index: 4;
+    cursor: default;
 }
 
 #scroller::-webkit-scrollbar {
@@ -227,7 +229,149 @@ margin-top: 40px;
 }
 
 
-  
+#cards-container {
+    /* background-color: red; */
+    height: 90vh;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    /* position: relative; */
+    z-index: 13;
+    margin-bottom: 30vh;
+   
+  }
+  .card {
+    height: 80%;
+    width: 24%;
+    background-color: blue;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+  }
+  #card1 {
+    background-image: url(https://assets-global.website-files.com/64e08fe32b86aaaa42e3a381/6519a485d54435c35b5649dd_Flowzai%20Product%20Image17.png);
+  }
+  #card2 {
+    background-image: url(https://i.ytimg.com/vi/mbSStC0GjoQ/maxresdefault.jpg);
+  }
+  #card3 {
+    background-image: url(https://th.bing.com/th/id/OIP.OqEh7-fnsmxxVThYXJow4wAAAA?rs=1&pid=ImgDetMain);
+  }
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color:#96c11eea;;
+    padding: 30px;
+    padding-top: 60px;
+    opacity: 0;
+    transition: all ease 0.6s;
+  }
+  .overlay h4 {
+    color: #000;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    font-weight: 800;
+  }
+  .overlay p {
+    color: #000;
+    font-size: 18px;
+    display: flex;
+    width: 70%;
+justify-content: center;
+align-items: start;
+line-height: 5vh;
+
+    padding: 20px;
+  }
+  .card:hover .overlay {
+    opacity: 1;
+  }
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+  }
+  #green-div {
+    margin-top: 15%;
+   height: 20vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    
+    /* background-color: red; */
+    /* background: linear-gradient(to left bottom, #119f3a, #ace022); */
+  }
+  #contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    
+  }
+  #contact-box h4 {
+    width: 100%;
+    line-height: 50px;
+    color: #e7dbdbee;
+    text-align: center;
+    font-weight: 800;
+    font-size: 27px;
+    text-transform: uppercase;
+    
+  }
+  #green-div img {
+   
+    height: 100%;
+    object-fit: cover;
+    width: 14%;
+  }
+  .query-form{
+    margin-top: 0;
+    position: absolute;
+    display: flex;
+
+    flex-direction: column;
+  }
+  #contact-box{
+width:100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+    margin: 40px;
+    z-index: 14;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 50%;
+    padding: 0.5rem;
+    margin: 10px;
+    border-radius: 9px;
+    font-size: 1.1rem;
+    margin-left: 22vmax;
+ 
+} 
+
+#contact-box form{
+    width: 100%;
+}
+#contact-box button{
+    flex:content;
+    flex-direction: column;
+    width:50%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
   @keyframes scroll {
     from {
       transform: translateX(0);
@@ -286,5 +430,10 @@ margin-top: 40px;
         width:100%;
         height:50%;
     }
-
+#cards-container{
+    display: flex;
+    flex-direction: column;
+    width: 100 vmax;
+    height:80 vmax;
+}
 }
