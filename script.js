@@ -17,3 +17,10 @@ gsap.to(".nav",{
         scrub:2
     }
 });
+function openModal() {
+  document.getElementById("myModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
