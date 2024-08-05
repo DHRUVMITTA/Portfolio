@@ -5,13 +5,23 @@ html, body {
     padding: 0;
     /* for stoping scrolling */
     /* overflow: hidden; */
+    overflow-x: hidden;
     scroll-behavior: smooth;
     background-color: rgb(5, 9, 19);
 
     color:white;
     /* box-sizing: border-box; */
 }
+body::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  background:  rgb(192, 249, 223);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
 
+  border-radius: 50px;
+}
 .main {
     height: 100%;
     width: 100%;
@@ -45,7 +55,7 @@ html, body {
     background-color: #7cd9e093;
     border-radius: 50%;
     position: fixed;
-    z-index: 99;
+    z-index: 999;
     transition: all linear 0.1s;
     pointer-events: none;
   }
@@ -245,7 +255,7 @@ margin-top: 40px;
   .card {
     height: 80%;
     width: 24%;
-    background-color: blue;
+    /* background-color: blue; */
     border-radius: 20px;
     background-size: cover;
     background-position: center;
@@ -254,6 +264,7 @@ margin-top: 40px;
   }
   #card1 {
     background-image: url(https://assets-global.website-files.com/64e08fe32b86aaaa42e3a381/6519a485d54435c35b5649dd_Flowzai%20Product%20Image17.png);
+    
   }
   #card2 {
     background-image: url(https://i.ytimg.com/vi/mbSStC0GjoQ/maxresdefault.jpg);
@@ -264,7 +275,7 @@ margin-top: 40px;
   .overlay {
     height: 100%;
     width: 100%;
-    background-color:#96c11eea;;
+    background:linear-gradient(to left,#95c11e,rgb(131, 228, 239));
     padding: 30px;
     padding-top: 60px;
     opacity: 0;
@@ -428,7 +439,70 @@ width:100%;
 .modal-content button:hover {
   opacity: 0.8;
 }
+.footer{
+  margin-top: 40vh;
+  width: 100%;
+  background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6.5vw;
+  padding: 0 100px;
+}
+.footer {
 
+  width: 100%;
+  background: linear-gradient(to left bottom, #3bd3ce 0%, #f9f9f8c9 80%);
+  position: relative;
+  display: flex;
+  align-items: center;
+ 
+  justify-content: space-between;
+  
+
+  
+}
+
+.info{
+  height: 8vh;
+  width:50%;
+  overflow: hidden;
+  /* background-color: #dc3545; */
+  position: relative;
+  gap: 4vw;
+  display: flex;
+  flex-direction: row;
+  right:-29%;
+}
+.f4 h4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+margin-top: 0;
+position: absolute;
+}
+
+.fimg img{
+
+  height:4vh;
+  position: absolute;
+}
+.icon{
+  display: flex;
+  height: 5vh;
+  gap:4vw;
+  z-index: 1;
+}
+.footer f4 {
+  position: absolute;
+  display: flex;
+  
+  flex-direction: column-reverse;
+
+
+}
   @keyframes scroll {
     from {
       transform: translateX(0);
@@ -492,5 +566,6 @@ width:100%;
     flex-direction: column;
     width: 100 vmax;
     height:80 vmax;
+    scale: 1.1;
 }
 }
