@@ -8,7 +8,18 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="script.js">
-
+    <script>
+        function openMenu()
+        {
+            document.getElementById('container').style.right='0%';
+            document.getElementById('menu').style.opacity='1';
+        }
+        function closeMenu()
+        {
+            document.getElementById('container').style.right='-100%';
+            document.getElementById('menu').style.opacity='0';
+        }
+        </script>
 </head>
 <body>
     <div class="nav">
@@ -18,9 +29,19 @@
             <h5><a href="#Projects">Projects</a></h5>
             <h5><a href="#contact">Contact Me</a></h5>
             <h5><a href="#Clients">Clients</a></h5>
-            <i><img src="menu-line.png" alt="menu"></i>
+            <i><img src="menu-line.png" alt="menu"onclick="openMenu()"></i>
         </div>
     </div>
+    <div id="container">
+        <div id="close" onclick="closeMenu()"><span class="red-plus">&#10133;</span></div>
+        <ul id="menu">
+           <li><a href="#Home">Home</a></li>
+           <li><a href="#Projects">Projects</a></li>
+           <li><a href="#contact">Contact Me</a></li>
+           <li><a href="#Clients">Clients</a></li>
+
+        </ul>    
+       </div>   
     <div id="cursor"></div>
     <div id="cursor-blur"></div>
     <div class="main">
